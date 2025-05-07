@@ -1,21 +1,147 @@
-MIT License
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#">🌴Travel</a>
+      <nav class="nave">
+        <a href="#">Tour List</a>
+        <a href="#">Destinations</a>
+        <a href="#">Discounts</a>
+      </nav>
+    </header>
 
-Copyright (c) 2025 CrisVital
+    <div class="fundol">
+      <div class="contenteudo">
+        <h2>Let's go now</h2>
+        <h1>Explore and travel</h1>
+        <button class="btn">VIEW OUR TOURS</button>
+      </div>
+    </div>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    <div class="imagens1">
+      <img src="./images/div.mulher__card.svg" alt="" />
+      <img src="./images/div.paisagem__card.svg" alt="" />
+      <img src="./images/div.predios__card.svg" alt="" />
+      <img src="./images/div.castelo__card.svg" alt="" />
+    </div>
+  </body>
+</html>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+body {
+  background-color: #fff; /* Define a cor de fundo da página como branca */
+  font-family: sans-serif; /* Define a fonte padrão para o texto */
+  max-width: 1280px; /* Limita a largura máxima do conteúdo */
+  margin: auto; /* Centraliza o conteúdo na tela */
+}
+
+.contenteudo {
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.contenteudo h2,
+.contenteudo h1 {
+  font-family: "Kaushan Script", cursive; /* Define uma fonte personalizada para os títulos */
+  color: rgba(255, 255, 255, 1); /* Cor branca para os títulos */
+}
+
+.btn {
+  padding: 0.8rem 3rem; /* Espaçamento interno (vertical 0.8rem, horizontal 3rem) */
+  background-color: rgba(116, 204, 1, 1); /* Cor de fundo verde */
+  color: #fff; /* Cor do texto: branco */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+}
+
+.btn:hover {
+  background-color: rgb(58, 251, 58);
+  /* Cor de fundo ao passar o mouse (⚠️ valor incorreto, veja observação abaixo) */
+}
+
+header {
+  background-color: #fff; /* Fundo branco do cabeçalho */
+  padding: 0.8rem; /* Espaçamento interno */
+  display: flex; /* Ativa o layout Flexbox */
+  justify-content: space-between; /* Espaça o logo e os links igualmente nas extremidades */
+  align-items: center; /* Centraliza os itens verticalmente */
+}
+
+header a {
+  color: black; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  padding-right: 0.5rem; /* Espaço à direita dos links */
+}
+
+.fundol {
+  background-color: rgba(255, 100, 3, 1); /* Fundo laranja */
+  display: flex; /* Layout Flexbox para alinhar o conteúdo */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  padding: 3rem; /* Espaçamento interno grande */
+}
+
+.imagens1 {
+  display: flex; /* Ativa o layout Flexbox */
+  flex-wrap: wrap; /* Permite que os itens quebrem para outra linha se necessário */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 1.5rem; /* Espaçamento entre as imagens */
+  padding: 2rem 1rem; /* Espaço interno ao redor das imagens */
+  background-color: #f8f8f8; /* Cor de fundo suave para destacar as imagens */
+  margin-top: 2rem; /* Espaço acima das imagens, separando do fundo laranja */
+}
+
+/* Estilo das imagens dentro do container */
+.imagens1 img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+  height: auto; /* Mantém a proporção original da imagem */
+  width: 200px; /* Define a largura base das imagens */
+  border-radius: 0.8rem; /* Arredonda os cantos das imagens */
+}
+
+/* Estilos para telas menores que 600px (mobile) */
+@media (max-width: 600px) {
+  .contenteudo
+    h1; /* ⚠️ Este ponto e vírgula está errado — deveria ser removido */
+   {
+    font-size: 1.8rem; /* Reduz o tamanho do h1 no mobile */
+  }
+
+  .conteudo h2 {
+    /* ⚠️ Cuidado: está escrito "conteudo", mas o correto pode ser "contenteudo" */
+    font-size: 1.2rem; /* Reduz o tamanho do h2 no mobile */
+  }
+
+  nav.nave {
+    display: flex; /* Ativa Flexbox para o menu */
+    flex-direction: column; /* Coloca os links em coluna (um abaixo do outro) */
+    gap: 0.5; /* Espaço entre os links (⚠️ falta unidade, ex: 0.5rem) */
+    align-items: flex-end; /* Alinha os links à direita */
+  }
+
+  .btn {
+    padding: 0.6rem 2rem; /* Reduz o tamanho do botão */
+    font-size: 1rem; /* Ajusta o tamanho da fonte no botão */
+  }
+
+  .imagens1 {
+    gap: 1rem; /* Diminui o espaço entre as imagens */
+    padding: 1.5rem 1rem; /* Reduz o espaço interno */
+    margin-top: 1.5rem; /* Reduz o espaço acima das imagens */
+  }
+
+  .imagens1 img {
+    width: 100%; /* Faz as imagens ocuparem 100% da largura disponível */
+    max-width: 300px; /* Limita a largura máxima para evitar distorções */
+  }
+}
