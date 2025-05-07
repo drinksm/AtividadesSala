@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#">🌴Travel</a>
+      <nav class="nave">
+        <a href="#">Tour List</a>
+        <a href="#">Destinations</a>
+        <a href="#">Discounts</a>
+      </nav>
+    </header>
+
+    <div class="fundol">
+      <div class="contenteudo">
+        <h2>Let's go now</h2>
+        <h1>Explore and travel</h1>
+        <button class="btn">VIEW OUR TOURS</button>
+      </div>
+    </div>
+
+    <div class="imagens1">
+      <img src="./images/div.mulher__card.svg" alt="" />
+      <img src="./images/div.paisagem__card.svg" alt="" />
+      <img src="./images/div.predios__card.svg" alt="" />
+      <img src="./images/div.castelo__card.svg" alt="" />
+    </div>
+  </body>
+</html>
 
